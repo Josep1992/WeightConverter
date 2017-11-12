@@ -103,17 +103,30 @@ button:active {
 .wrapper ul {
     display: flex;
     flex-direction: column;
+    
+}
+
+a {
+    color: #f2ac00;
+    cursor: pointer;
+
+}
+
+a :hover{
+    transform: scale(1.5);
+    color:white;
 }
 
 .wrapper ul li {
     background-color: #f2ac00;
     width: 300px;
-    margin: 12px auto;
+    margin: 10px auto;
     border-radius: 5px;
     font-size: 18px;
     color: white;
     text-transform: lowercase;
-    padding: 15px;
+    padding: 10px;
+    
 }
 
 .wrapper li:nth-child(2n) {
