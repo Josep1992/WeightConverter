@@ -4,9 +4,6 @@
 // Only one selected button at a time.
 // Finish the animations on the results section.
 
-
-
-
 const input = document.getElementById('input');
 const btn = document.getElementsByClassName('btn');
 const poundsButton = document.getElementById('pounds');
@@ -23,40 +20,60 @@ const result4 = document.getElementById('result4');
 
 poundsButton.addEventListener("click", function () {
     resetLiContent();
-    activeBtn();
+    this.classList.toggle('selected');
+    kilogramButton.classList.toggle('display');
+    gramsButton.classList.toggle('display');
+    ouncesButton.classList.toggle('display');
+    usTonsButton.classList.toggle('display');
     displayPoundResults();
-    fadeInResults();
+
 
 });
 
 kilogramButton.addEventListener('click', function () {
     resetLiContent();
     this.classList.toggle('selected');
+    poundsButton.classList.toggle('display');
+    gramsButton.classList.toggle('display');
+    ouncesButton.classList.toggle('display');
+    usTonsButton.classList.toggle('display');
     displayKilogramResults();
-    fadeInResults();
+    
 
 });
 
 gramsButton.addEventListener('click', function () {
     resetLiContent();
     this.classList.toggle('selected');
+    poundsButton.classList.toggle('display');
+    kilogramButton.classList.toggle('display');
+    ouncesButton.classList.toggle('display');
+    usTonsButton.classList.toggle('display');
     displayGramResults();
-    fadeInResults();
+    
 });
 
 
 ouncesButton.addEventListener('click', function () {
     resetLiContent();
     this.classList.toggle('selected');
+    poundsButton.classList.toggle('display');
+    gramsButton.classList.toggle('display');
+    kilogramButton.classList.toggle('display');
+    usTonsButton.classList.toggle('display');
     displayOuncesResults();
-    fadeInResults();
+    
 });
 
 usTonsButton.addEventListener('click', function () {
     resetLiContent();
     this.classList.toggle('selected');
+    poundsButton.classList.toggle('display');
+    gramsButton.classList.toggle('display');
+    ouncesButton.classList.toggle('display');
+    kilogramButton.classList.toggle('display');
     displayUsTonsResults();
-    fadeInResults();
+    
 })
 
 // *********************Objects***************************
@@ -304,22 +321,10 @@ function displayPoundResults() {
 }
 
 
-function fadeInResults() {
-    result1.classList.add('display');
-    result2.classList.add('display');
-    result3.classList.add('display');
-    result4.classList.add('display');
-}
-
 function resetLiContent() {
     result1.textContent = " ";
     result2.textContent = " ";
     result3.textContent = " ";
     result4.textContent = " ";
 
-}
-
-function activeBtn() {
-    this.classList.add('selected');
-    btn.classlist.remove('selected');
 }
