@@ -103,7 +103,6 @@ button:active {
 .wrapper ul {
     display: flex;
     flex-direction: column;
-    
 }
 
 .wrapper ul li {
@@ -115,7 +114,6 @@ button:active {
     color: white;
     text-transform: lowercase;
     padding: 15px;
-    
 }
 
 .wrapper li:nth-child(2n) {
