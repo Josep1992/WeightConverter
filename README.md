@@ -10,7 +10,7 @@
 **Previews**
 
 ![Page-preview](images/Weight-Converter.png)
-![Formulas](images/ConversionFormulas.png)
+
 
 ### Fixes
 
