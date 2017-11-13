@@ -17,7 +17,7 @@ body {
 }
 
 .container {
-    margin: 30px auto;
+    margin: 40px auto;
     background: #1b2a4c;
     padding-bottom: 20px;
     display: flex;
@@ -51,7 +51,7 @@ section {
 }
 
 input {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     outline: none;
     background-color: #1b2a4c;
     border: 0;
@@ -69,7 +69,7 @@ input:focus {
 
 button {
     outline: none;
-    padding: 3px;
+    padding: 10px;
     cursor: pointer;
     background-color: #f2ac00;
     color: #1b2a4c;
@@ -93,44 +93,27 @@ button:active {
     animation: flash 3s 2s ease-out infinite;
 }
 
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.wrapper ul {
-    display: flex;
-    flex-direction: column;
-    
-}
-
-a {
-    color: #f2ac00;
-    cursor: pointer;
-
-}
-
-a :hover{
-    transform: scale(1.5);
-    color:white;
-}
-
-.wrapper ul li {
+.wrapper div {
     background-color: #f2ac00;
     width: 300px;
-    margin: 10px auto;
+    height: 50px;
+    margin: 20px auto;
     border-radius: 5px;
     font-size: 18px;
     color: white;
     text-transform: lowercase;
     padding: 10px;
-    
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
-.wrapper li:nth-child(2n) {
-    background-color: #1b2a4c;
+a {
+    color: #f2ac00;
+    cursor: pointer;
+}
+
+a :hover {
+    transform: scale(1.5);
+    color: white;
 }
 
 

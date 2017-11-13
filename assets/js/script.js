@@ -1,11 +1,7 @@
-// Todos:
 
-// Make the selected button add a class of selected on click.
-// Only one selected button at a time.
-// Finish the animations on the results section.
+
 
 const input = document.getElementById('input');
-const btn = document.getElementsByClassName('btn');
 const poundsButton = document.getElementById('pounds');
 const kilogramButton = document.getElementById('kilograms');
 const gramsButton = document.getElementById('grams');
