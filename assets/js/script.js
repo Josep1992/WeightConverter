@@ -20,11 +20,7 @@ const result4 = document.getElementById('result4');
 
 poundsButton.addEventListener("click", function () {
     resetLiContent();
-    this.classList.toggle('selected');
-    kilogramButton.classList.toggle('display');
-    gramsButton.classList.toggle('display');
-    ouncesButton.classList.toggle('display');
-    usTonsButton.classList.toggle('display');
+    ActiveThis(this, "poundsButton");
     displayPoundResults();
 
 
@@ -32,48 +28,32 @@ poundsButton.addEventListener("click", function () {
 
 kilogramButton.addEventListener('click', function () {
     resetLiContent();
-    this.classList.toggle('selected');
-    poundsButton.classList.toggle('display');
-    gramsButton.classList.toggle('display');
-    ouncesButton.classList.toggle('display');
-    usTonsButton.classList.toggle('display');
+    ActiveThis(this, "kilogramButton");
     displayKilogramResults();
-    
+
 
 });
 
 gramsButton.addEventListener('click', function () {
     resetLiContent();
-    this.classList.toggle('selected');
-    poundsButton.classList.toggle('display');
-    kilogramButton.classList.toggle('display');
-    ouncesButton.classList.toggle('display');
-    usTonsButton.classList.toggle('display');
+    ActiveThis(this, "gramsButton");
     displayGramResults();
-    
+
 });
 
 
 ouncesButton.addEventListener('click', function () {
     resetLiContent();
-    this.classList.toggle('selected');
-    poundsButton.classList.toggle('display');
-    gramsButton.classList.toggle('display');
-    kilogramButton.classList.toggle('display');
-    usTonsButton.classList.toggle('display');
+    ActiveThis(this, "ouncesButton");
     displayOuncesResults();
-    
+
 });
 
 usTonsButton.addEventListener('click', function () {
     resetLiContent();
-    this.classList.toggle('selected');
-    poundsButton.classList.toggle('display');
-    gramsButton.classList.toggle('display');
-    ouncesButton.classList.toggle('display');
-    kilogramButton.classList.toggle('display');
+    ActiveThis(this, "usTonsButton");
     displayUsTonsResults();
-    
+
 })
 
 // *********************Objects***************************
@@ -327,4 +307,42 @@ function resetLiContent() {
     result3.textContent = " ";
     result4.textContent = " ";
 
+}
+
+// 
+
+function ActiveThis(element, variable) {
+    let isActiveElement = element;
+    let isActiveVar = variable;
+
+    //array of all the elements in string value
+    btnElements = ['poundsButton', 'kilogramButton', 'gramsButton', 'ouncesButton', 'usTonsButton'];
+
+    //only return the elements that are not Active
+    let IsNotActive = btnElements.filter(notActive => notActive != isActiveVar);
+
+    //inactive any elements that are not clicked
+    for (i = 0; i < IsNotActive.length; i++) {
+
+        //remove the selected class
+        eval(IsNotActive[i]).classList.remove("selected");
+
+        //check if not have the class "display"
+        if (!hasClass(eval(IsNotActive[i]), "display")) {
+            eval(IsNotActive[i]).classList.toggle("display");
+        }
+    }
+
+    //check if not have the class "display"
+    if (hasClass(isActiveElement, "display")) {
+        isActiveElement.classList.remove("display");
+    }
+
+    //apply the class to the active element
+    isActiveElement.classList.toggle("selected");
+
+    //check if the element have the class
+    function hasClass(elementCheck, Klass) {
+        return elementCheck.classList.contains(Klass);
+    }
 }
