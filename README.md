@@ -12,8 +12,3 @@
 ![Page-preview](images/Weight-Converter.png)
 
 
-### Fixes
-
-1. Center the li(The results section).
-2. Make a Function for active button.
-
