@@ -1,6 +1,3 @@
-
-
-
 const input = document.getElementById('input');
 const poundsButton = document.getElementById('pounds');
 const kilogramButton = document.getElementById('kilograms');
@@ -61,7 +58,7 @@ const poundConversions = {
 
         let convertPoundToKilogram = Number(inputValue) * 0.45359;
 
-        return convertPoundToKilogram + " Kilograms";
+        return Math.round(convertPoundToKilogram) + " Kilograms";
 
     },
 
@@ -70,7 +67,7 @@ const poundConversions = {
 
         let convertPoundToOunces = Number(inputValue) * 16.00000;
 
-        return convertPoundToOunces + " Ounces";
+        return Math.round(convertPoundToOunces) + " Ounces";
 
     },
 
@@ -79,7 +76,7 @@ const poundConversions = {
 
         let convertPoundToGrams = Number(inputValue) * 453.59232;
 
-        return convertPoundToGrams + " Grams";
+        return Math.round(convertPoundToGrams) + " Grams";
 
     },
 
@@ -88,7 +85,7 @@ const poundConversions = {
 
         let convertPoundToUsTons = Number(inputValue) * 0.00050;
 
-        return convertPoundToUsTons + " US Tons";
+        return Math.round(convertPoundToUsTons) + " US Tons";
 
     }
 }
@@ -99,7 +96,7 @@ const kilogramConversions = {
 
         let convertKilogramsToPound = Number(inputValue) * 2.20462;
 
-        return convertKilogramsToPound + " Pounds"
+        return Math.round(convertKilogramsToPound) + " Pounds"
 
     },
 
@@ -108,7 +105,7 @@ const kilogramConversions = {
 
         let convertKilogramsToOunces = Number(inputValue) * 35.27397;
 
-        return convertKilogramsToOunces + " Ounces"
+        return Math.round(convertKilogramsToOunces) + " Ounces"
 
     },
 
@@ -117,7 +114,7 @@ const kilogramConversions = {
 
         let convertKilogramsToGrams = Number(inputValue) * 1000.00000;
 
-        return convertKilogramsToGrams + " Grams"
+        return Math.round(convertKilogramsToGrams) + " Grams"
 
     },
 
@@ -126,7 +123,7 @@ const kilogramConversions = {
 
         let convertKilogramsToUsTons = Number(inputValue) * 0.00110;
 
-        return convertKilogramsToUsTons + " Us Tons"
+        return Math.round(convertKilogramsToUsTons) + " Us Tons"
 
     },
 }
@@ -138,7 +135,7 @@ const gramConversions = {
 
         let convertGramsToPounds = Number(inputValue) * 0.00220;
 
-        return convertGramsToPounds + " Pounds";
+        return Math.round(convertGramsToPounds) + " Pounds";
 
     },
 
@@ -148,7 +145,7 @@ const gramConversions = {
 
         let convertGramsToKilograms = Number(inputValue) * 0.00100;
 
-        return convertGramsToKilograms + " Kilograms";
+        return Math.round(convertGramsToKilograms) + " Kilograms";
 
     },
 
@@ -158,7 +155,7 @@ const gramConversions = {
 
         let convertGramsToOunces = Number(inputValue) * 0.03527;
 
-        return convertGramsToOunces + " Ounces";
+        return Math.round(convertGramsToOunces) + " Ounces";
 
     },
 
@@ -168,7 +165,7 @@ const gramConversions = {
 
         let convertGramsToUsTons = Number(inputValue) * 0.00000;
 
-        return convertGramsToUsTons + " Us Tons";
+        return Math.round(convertGramsToUsTons) + " Us Tons";
 
     }
 }
@@ -180,7 +177,7 @@ const ouncesConversions = {
 
         let convertOuncesToPounds = Number(inputValue) * 0.06250;
 
-        return convertOuncesToPounds + " Pounds";
+        return Math.round(convertOuncesToPounds) + " Pounds";
 
     },
 
@@ -190,7 +187,7 @@ const ouncesConversions = {
 
         let convertOuncesToGrams = Number(inputValue) * 28.34952;
 
-        return convertOuncesToGrams + " Grams";
+        return Math.round(convertOuncesToGrams) + " Grams";
 
     },
 
@@ -200,7 +197,7 @@ const ouncesConversions = {
 
         let convertOuncesToKilograms = Number(inputValue) * 0.02835;
 
-        return convertOuncesToKilograms + " Kilograms";
+        return Math.round(convertOuncesToKilograms )+ " Kilograms";
 
     },
 
@@ -210,7 +207,7 @@ const ouncesConversions = {
 
         let convertOuncesToUsTons = Number(inputValue) * 0.00003;
 
-        return convertOuncesToUsTons + " Us Tons";
+        return Math.round(convertOuncesToUsTons) + " Us Tons";
     }
 }
 
@@ -221,7 +218,7 @@ const usTonsConversions = {
 
         let convertUsTonsToPounds = Number(inputValue) * 2000.00000;
 
-        return convertUsTonsToPounds + " Pounds";
+        return Math.round(convertUsTonsToPounds) + " Pounds";
     },
 
     usTonsToGrams: function () {
@@ -230,7 +227,7 @@ const usTonsConversions = {
 
         let convertUsTonsToGrams = Number(inputValue) * 907184.64000;
 
-        return convertUsTonsToGrams + " Grams";
+        return Math.round(convertUsTonsToGrams) + " Grams";
 
     },
 
@@ -240,7 +237,7 @@ const usTonsConversions = {
 
         let convertUsTonsToKilograms = Number(inputValue) * 907.18464;
 
-        return convertUsTonsToKilograms + " Kilograms";
+        return Math.round(convertUsTonsToKilograms) + " Kilograms";
 
     },
 
@@ -250,7 +247,7 @@ const usTonsConversions = {
 
         let convertUsTonsToOunces = Number(inputValue) * 32000.00000;
 
-        return convertUsTonsToOunces + " Ounces";
+        return Math.round(convertUsTonsToOunces) + " Ounces";
 
     }
 
